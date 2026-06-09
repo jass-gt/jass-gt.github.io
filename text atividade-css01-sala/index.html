@@ -1,1 +1,77 @@
+<html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> cadastro de cliente</title>
+</head>
+<body>
 
+    <header class="cabecalho-principal">
+        <h1>Cadastro de Cliente</h1>
+        <p> Venha ser nosso sócio.</p>
+    </header>
+  
+            <div>
+                <label>Nome:</label>
+                <input  id="nome" name="nome" class="campo-texto" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="email" class="campo-obrigatorio">E-mail:</label>
+                <input type="email" id="email" name="email" class="campo-texto" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="senha">Crie uma Senha:</label>
+                <input type="password" id="senha" name="senha" class="campo-texto" placeholder="Mínimo 6 caracteres">
+            </div>
+
+            <div class="grupo-campo">
+                <label for="data-evento" class="campo-obrigatorio">Data de nascimento:</label>
+                <input type="date" id="data-evento" name="data-evento" class="campo-texto" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="trilha">Escolha seu curso:</label>
+                <select id="trilha" name="trilha" class="campo-selecao">
+                    <option value="frontend">introduçao a programação</option>
+                    <option value="backend"> Programaçâo wed</option>
+                    <option value="dados">Fundamentos da informatica</option>
+                </select>
+            </div>
+
+            <div class="grupo-campo">
+                <label>Turno :</label>
+                <div class="opcoes-inline">
+                    <label class="label-opcao">
+                        <input type="radio" name="turno" value="manha" checked> Manhã
+                    </label>
+                    <label class="label-opcao">
+                        <input type="radio" name="turno" value="tarde"> Tarde
+                    </label>
+                </div>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="experiencia">Fale brevemente sobre sua experiência na área:</label>
+                <textarea id="experiencia" name="experiencia" rows="4" placeholder="Conte-nos o que você já estuda ou trabalha..."></textarea>
+            </div>
+
+            <div class="grupo-campo checkbox-container">
+                <input type="checkbox" id="termos" name="termos" required>
+                <label for=>Aceito os termos de uso e políticas de privacidade.</label>
+            </div>
+
+            <button type= class="botao-principal">Confirmar Minha Inscrição</button>
+
+        </form>
+    </main>
+
+    <footer class="rodape-pagina">
+        <p>Desenvolvido por: <strong>[josé Anderson]</strong> & <strong>[Brenda Kyara]</strong></p>
+        <p>Disciplina: Desenvolvimento Web | Data: Junho de 2026</p>
+    </footer>
+
+</body>
+</html>
