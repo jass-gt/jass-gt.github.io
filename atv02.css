@@ -1,6 +1,6 @@
 /*
-rem usa o tamanho da fonte do elemento raiz (html).
-em usa o tamanho da fonte do elemento pai ou do próprio elemento.
+rem usa o tamanho da fonte raiz.
+em usa o tamanho da fonte do elemento pai.
 % depende das dimensões do elemento pai.
 No zoom todos aumentam, mas no redimensionamento cada unidade reage à sua referência.
 Use rem para tipografia, em para espaçamentos e % para layouts flexíveis.
