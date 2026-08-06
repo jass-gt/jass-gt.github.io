@@ -44,6 +44,26 @@
          <li> <a href="text atividade-css01-sala/index.html">Atividade em dupla (atv01 html)</a></li>
          <li> <a href="text atividade-css01-sala/style.css">Atividade em dupla (atv01 css)</a></li>
          <li> <a href="cap07/atv01.css">css corrigido (atv02)</a></li>
+
+		  <p>
+          <label for="experiencia">
+            Quanto você gostou?:
+            <span id="valor-experiencia">5</span>/10
+          </label>
+
+          <br>
+
+          <input
+            type="range"
+            id="experiencia"
+            name="experiencia"
+            min="0"
+            max="10"
+            step="1"
+            value="5"
+            oninput="document.getElementById('valor-experiencia').textContent=this.value">
+        </p>
+
          
 	 </body>
 </html>
