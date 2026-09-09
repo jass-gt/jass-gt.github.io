@@ -1,82 +1,82 @@
- <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>José Anderson</title>
-  <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Pessoal — osé Anderson Soares dos Santos</title>
+  <!-- Salve o tema escolhido como "estilo.css" (mesma pasta deste arquivo) -->
+  <link rel="stylesheet" href="estilo.css">
+</head>
 
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
-       thead { background-color: #000; color: white; }
+<body>
+  <div class="pagina">
 
-     </style>
-         
-        <div style="text-align: center">
-           <img height="200" src="foto.jpg">
-         <h1>José Anderson Soares dos Santos</h1>
+    <!-- ====== CABEÇALHO — TROQUE pelo seu nome e sua frase ====== -->
+    <header class="cabecalho">
+      <h1>José Anderson Soares dos Santos</h1>
+      <p>Estudante de Sistemas de Informação · IFAL</p>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <!-- ====== CONTEÚDO PRINCIPAL ====== -->
+    <main class="principal">
+      <section id="sobre" class="cartao">
+        <h2>Sobre mim</h2>
+        <!-- TROQUE por uma breve apresentação sua -->
+        <p>Eu gosto de jogar capoeira e bola. No meu tempo livre gosto de ficar em casa ou sair com a minha namorada. Quando eu saio com os meus amigos geralmente é para a praia jogar bola ou sair andando de bike, Na área de tecnologia eu só fico treinando </p>
+      </section>
+
+      <section id="projetos" class="cartao">
+        <h2>Projetos</h2>
+        <!-- Galeria com Grid: cada .projeto é um card; adicione/remova à vontade -->
+        <div class="projetos">
+          <article class="projeto">
+            <h3>Projeto 1</h3>
+            <p>Não tenho nenhum projeto ainda.</p>
+          </article>
+          <article class="projeto">
+            <h3>Projeto 2</h3>
+            <p>Não tenho nenhum projeto ainda.</p>
+          </article>
+          <article class="projeto">
+            <h3>Projeto 3</h3>
+            <p>Não tenho nenhum projeto ainda.</p>
+          </article>
         </div>
+      </section>
+    </main>
 
-        <h2>Informações Pessoais</h2>
-        <p><strong>Turma:</strong> 921 "C" - Desenvolvimento de Sistemas</p>
-        <p><strong>Data de Nascimento:</strong> 09/03/2011</p>
-        <p>Eu gosto de jogar capoeira e bola. No meu tempo livre gosto de ficar em casa ou sair com a minha namorada. Quando eu saio com os meus amigos geralmente é para a praia jogar bola ou sair andando de bike.</p>
-
-        <h2>Aprendizados</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
+    <!-- ====== BARRA LATERAL ====== -->
+    <aside class="lateral">
+      <section class="cartao">
+        <h2>Habilidades</h2>
+        <!-- TROQUE pelas suas habilidades -->
+        <ul class="habilidades">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Grid</li>
+          <li>JavaScript</li>
         </ul>
+      </section>
 
-        <h2>Atividades da Disciplina</h2>
+      <section id="contato" class="cartao">
+        <h2>Contato</h2>
+        <!-- TROQUE pelos seus links -->
+        <ul class="contato">
+          <li>✉️ <a href="jass44@aluno.ifal.edu.br">jass44@aluno.ifal.edu.br</a></li>
+          <li>🐙 <a href="https://github.com/jass-gt/jass-gt.github.io">github.com</a></li>
+        </ul>
+      </section>
+    </aside>
 
-        <table border 2.5>
-            <thead>
-                <tr>
-                    <th>Atividade</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-           
-                <tr>
-                    <td>1º Bim/Cap 04: Tabela Básica</td>
-                    <td><a href="cap04/at01-tabela-basica.html">Abrir</a></td>
-                </tr>
-                <tr>
-                    <td>1º Bim/Cap 04: Tabela Semântica</td>
-                    <td><a href="cap04/at02-tabela-semantica.html">Abrir</a></td>
-                </tr>
-                <tr>
-                    <td>1º Bim/Cap 04: Listas Avançadas</td>
-                    <td><a href="cap04/at03-listas-avancadas.html">Abrir</a></td>
-                </tr>
-                <tr>
-                    <td>1º Bim/Cap 05: Formulário de Contato</td>
-                    <td><a href="cap05/ATV01.html">Abrir</a></td>
-                </tr>
-                <tr>
-                    <td>1º Bim/Cap 05: Cadastro de Usuário</td>
-                    <td><a href="cap05/atv02.html">Abrir</a></td>
-                </tr>
-                <tr>
-                    <td>1º Bim/Cap 05: Matrícula Acadêmica</td>
-                    <td><a href="cap05/atv03.html">Abrir</a></td>
-                </tr>
-                <tr>
-                    <td>1º Bim/Cap 05: Inscrição em Evento</td>
-                    <td><a href="cap05/atv04.html">Abrir</a></td>
-                </tr>
-                <tr>
-                    <td>2º Bim/Cap 07: Atividade CSS 01</td>
-                    <td><a href="text atividade-css01-sala/index.html">Abrir</a></td>
-                </tr>
-                <tr>
-                    <td>2º Bim/Cap 07: CSS Corrigido</td>
-                    <td><a href="cap07">Abrir</a></td>
-                </tr>
-          
-        </table>
+    <!-- ====== RODAPÉ — TROQUE o nome ====== -->
+    <footer class="rodape">© 2026 José Anderson Soares dos Santos · feito com HTML + CSS Grid</footer>
 
- 
-
+  </div>
 </body>
+
 </html>
