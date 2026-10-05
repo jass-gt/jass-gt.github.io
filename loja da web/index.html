@@ -251,6 +251,17 @@
     document.getElementById('modalAntigo').textContent = antigo;
     document.getElementById('modalPreco').textContent = preco;
   });
+    // Preenche o modal com os dados do item clicado
+  document.getElementById('modalProduto').addEventListener('show.bs.modal', (e) => {
+    const { nome, antigo, preco } = e.relatedTarget.dataset;
+    // pega a foto do próprio card clicado, então sempre é a foto certa do produto
+    const foto = e.relatedTarget.closest('.card').querySelector('.card-img-top');
+    document.getElementById('modalTitulo').textContent = nome;
+    document.getElementById('modalImg').src = foto.src;
+    document.getElementById('modalImg').alt = nome;
+    document.getElementById('modalAntigo').textContent = antigo;
+    document.getElementById('modalPreco').textContent = preco;
+  });
 
   // Newsletter
   document.getElementById('formNews').addEventListener('submit', (e) => {
