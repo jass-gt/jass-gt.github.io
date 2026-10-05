@@ -1,1 +1,168 @@
+/* todas as fotos com proporção fixa: o recorte é feito pelo CSS (object-fit) */
+.carousel-item img { width:100%; aspect-ratio:24 / 7; object-fit:cover; }
+.card-img-top      { width:100%; aspect-ratio:4 / 3;  object-fit:cover; }
+.banner-foto       { width:100%; aspect-ratio:30 / 11; object-fit:cover; }
+#modalImg          { width:100%; aspect-ratio:3 / 2;  object-fit:cover; }
 
+@media (max-width:575.98px){
+  .carousel-item img { aspect-ratio:16 / 9; }
+}
+
+/* newsletter */
+.newsletter-form { max-width:480px; }
+
+:root,
+[data-bs-theme="dark"] {
+  --verde-fundo:   #07261a;
+  --verde-escuro:  #0c3825;
+  --verde:         #145a3a;
+  --verde-claro:   #1f7a4d;
+  --dourado:       #d4af37;
+  --dourado-claro: #f0d27a;
+  --dourado-escuro:#b8932a;
+ 
+  /* cores base do Bootstrap */
+  --bs-primary:      #d4af37;
+  --bs-primary-rgb:  212, 175, 55;
+  --bs-danger:       #d4af37;
+  --bs-danger-rgb:   212, 175, 55;
+  --bs-success:      #1f7a4d;
+  --bs-success-rgb:  31, 122, 77;
+ 
+  /* fundos */
+  --bs-body-bg:            #07261a;
+  --bs-body-bg-rgb:        7, 38, 26;
+  --bs-body-color:         #f3efe0;
+  --bs-body-color-rgb:     243, 239, 224;
+  --bs-secondary-bg:       #0c3825;
+  --bs-secondary-bg-rgb:   12, 56, 37;
+  --bs-tertiary-bg:        #0a301f;
+  --bs-tertiary-bg-rgb:    10, 48, 31;
+ 
+  /* bordas e links */
+  --bs-border-color:       rgba(212, 175, 55, .35);
+  --bs-link-color:         #f0d27a;
+  --bs-link-color-rgb:     240, 210, 122;
+  --bs-link-hover-color:   #d4af37;
+  --bs-link-hover-color-rgb: 212, 175, 55;
+  --bs-secondary-color:    rgba(243, 239, 224, .65);
+  --bs-focus-ring-color:   rgba(212, 175, 55, .35);
+}
+ 
+/* Faixa de aviso e itens com fundo dourado: texto verde escuro para dar contraste */
+.bg-primary,
+.bg-danger,
+.text-bg-danger,
+.text-bg-primary {
+  color: #07261a !important;
+  font-weight: 600;
+}
+ 
+/* Botões primários: dourado */
+.btn-primary {
+  --bs-btn-color: #07261a;
+  --bs-btn-bg: #d4af37;
+  --bs-btn-border-color: #d4af37;
+  --bs-btn-hover-color: #07261a;
+  --bs-btn-hover-bg: #f0d27a;
+  --bs-btn-hover-border-color: #f0d27a;
+  --bs-btn-active-color: #07261a;
+  --bs-btn-active-bg: #b8932a;
+  --bs-btn-active-border-color: #b8932a;
+  --bs-btn-focus-shadow-rgb: 212, 175, 55;
+  font-weight: 600;
+}
+ 
+/* Botões com contorno */
+.btn-outline-primary,
+.btn-outline-light {
+  --bs-btn-color: #d4af37;
+  --bs-btn-border-color: #d4af37;
+  --bs-btn-hover-color: #07261a;
+  --bs-btn-hover-bg: #d4af37;
+  --bs-btn-hover-border-color: #d4af37;
+  --bs-btn-active-color: #07261a;
+  --bs-btn-active-bg: #b8932a;
+  --bs-btn-active-border-color: #b8932a;
+}
+ 
+/* Botão secundário (Fechar no modal): verde */
+.btn-secondary {
+  --bs-btn-bg: #145a3a;
+  --bs-btn-border-color: #145a3a;
+  --bs-btn-hover-bg: #1f7a4d;
+  --bs-btn-hover-border-color: #1f7a4d;
+  --bs-btn-active-bg: #0c3825;
+  --bs-btn-active-border-color: #0c3825;
+}
+ 
+/* Navbar */
+.navbar {
+  border-bottom: 2px solid #d4af37;
+}
+.navbar-brand { color: #d4af37 !important; }
+.nav-link:hover,
+.nav-link:focus,
+.dropdown-item:hover {
+  color: #d4af37;
+}
+.dropdown-menu {
+  --bs-dropdown-bg: #0c3825;
+  --bs-dropdown-border-color: rgba(212, 175, 55, .45);
+  --bs-dropdown-link-hover-bg: #145a3a;
+  --bs-dropdown-link-hover-color: #f0d27a;
+}
+.navbar-toggler { border-color: #d4af37; }
+ 
+/* Cards */
+.card {
+  --bs-card-bg: #0c3825;
+  --bs-card-border-color: rgba(212, 175, 55, .35);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #d4af37;
+  box-shadow: 0 .5rem 1.25rem rgba(0, 0, 0, .4);
+}
+.card-title { color: #f0d27a; }
+ 
+/* Títulos */
+h2, h4 {
+  color: #d4af37;
+}
+h6 { color: #d4af37; }
+ 
+/* Formulários */
+.form-control,
+.form-control:focus {
+  background-color: #0c3825;
+  color: #f3efe0;
+  border-color: rgba(212, 175, 55, .5);
+}
+.form-control:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 .25rem rgba(212, 175, 55, .25);
+}
+.form-control::placeholder { color: rgba(243, 239, 224, .5); }
+ 
+/* Carrossel */
+.carousel-indicators [data-bs-target] { background-color: #d4af37; }
+ 
+/* Modal */
+.modal-content {
+  --bs-modal-bg: #0c3825;
+  --bs-modal-border-color: #d4af37;
+  --bs-modal-header-border-color: rgba(212, 175, 55, .35);
+  --bs-modal-footer-border-color: rgba(212, 175, 55, .35);
+}
+.btn-close { filter: invert(1) sepia(1) saturate(4) hue-rotate(5deg); }
+ 
+/* Rodapé */
+footer {
+  border-top: 2px solid #d4af37;
+}
+footer .border-top {
+  border-color: rgba(212, 175, 55, .35) !important;
+}
+ 
