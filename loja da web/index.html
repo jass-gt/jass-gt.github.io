@@ -241,17 +241,7 @@
       contador.textContent = Number(contador.textContent) + 1;
     }
   });
-
   // Preenche o modal com os dados do item clicado
-  document.getElementById('modalProduto').addEventListener('show.bs.modal', (e) => {
-    const { nome, antigo, preco, foto } = e.relatedTarget.dataset;
-    document.getElementById('modalTitulo').textContent = nome;
-    document.getElementById('modalImg').src =
-      `imagens/${foto}.jpg`;
-    document.getElementById('modalAntigo').textContent = antigo;
-    document.getElementById('modalPreco').textContent = preco;
-  });
-    // Preenche o modal com os dados do item clicado
   document.getElementById('modalProduto').addEventListener('show.bs.modal', (e) => {
     const { nome, antigo, preco } = e.relatedTarget.dataset;
     // pega a foto do próprio card clicado, então sempre é a foto certa do produto
