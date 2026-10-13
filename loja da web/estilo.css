@@ -1,45 +1,67 @@
-/* todas as fotos com proporção fixa: o recorte é feito pelo CSS (object-fit) */
+/* ==========================================================
+   FOTOS COM PROPORÇÃO FIXA
+   aspect-ratio define a proporção da caixa e o object-fit: cover
+   recorta a imagem para preencher tudo, sem distorcer.
+   ========================================================== */
+
+/* Imagens do carrossel: largura total, proporção bem "larga" (24:7) */
 .carousel-item img { width:100%; aspect-ratio:24 / 7; object-fit:cover; }
+
+/* Imagem de topo dos cards de produto: proporção 4:3 */
 .card-img-top      { width:100%; aspect-ratio:4 / 3;  object-fit:cover; }
+
+/* Foto do banner (classe própria): proporção 30:11 */
 .banner-foto       { width:100%; aspect-ratio:30 / 11; object-fit:cover; }
+
+/* Imagem dentro do modal (pop-up): proporção 3:2 */
 #modalImg          { width:100%; aspect-ratio:3 / 2;  object-fit:cover; }
 
+/* Em telas pequenas (celular, até 575px) o carrossel fica mais alto (16:9),
+   porque 24:7 ficaria muito achatado numa tela estreita */
 @media (max-width:575.98px){
   .carousel-item img { aspect-ratio:16 / 9; }
 }
 
-/* newsletter */
+/* Formulário da newsletter: limita a largura a 480px */
 .newsletter-form { max-width:480px; }
 
+
+/* ==========================================================
+   VARIÁVEIS DE COR (paleta verde e dourado)
+   :root = página toda; [data-bs-theme="dark"] = tema escuro do Bootstrap.
+   Redefinir as variáveis --bs-* faz o Bootstrap inteiro usar suas cores.
+   ========================================================== */
 :root,
 [data-bs-theme="dark"] {
-  --verde-fundo:   #07261a;
-  --verde-escuro:  #0c3825;
-  --verde:         #145a3a;
-  --verde-claro:   #1f7a4d;
-  --dourado:       #d4af37;
-  --dourado-claro: #f0d27a;
-  --dourado-escuro:#b8932a;
- 
-  /* cores base do Bootstrap */
+  /* Paleta própria do projeto (você usa com var(--nome)) */
+  --verde-fundo:   #07261a;   /* verde mais escuro, fundo da página */
+  --verde-escuro:  #0c3825;   /* cards, navbar, modal */
+  --verde:         #145a3a;   /* verde médio */
+  --verde-claro:   #1f7a4d;   /* verde mais vivo */
+  --dourado:       #d4af37;   /* dourado principal */
+  --dourado-claro: #f0d27a;   /* dourado claro (hover, títulos de card) */
+  --dourado-escuro:#b8932a;   /* dourado escuro (botão pressionado) */
+
+  /* Cores base do Bootstrap: o "primary" e o "danger" viram dourado,
+     o "success" vira verde. O -rgb é usado em transparências. */
   --bs-primary:      #d4af37;
   --bs-primary-rgb:  212, 175, 55;
   --bs-danger:       #d4af37;
   --bs-danger-rgb:   212, 175, 55;
   --bs-success:      #1f7a4d;
   --bs-success-rgb:  31, 122, 77;
- 
-  /* fundos */
+
+  /* Fundos e cor do texto: body = página; secondary/tertiary = áreas de apoio */
   --bs-body-bg:            #07261a;
   --bs-body-bg-rgb:        7, 38, 26;
-  --bs-body-color:         #f3efe0;
+  --bs-body-color:         #f3efe0;   /* texto creme */
   --bs-body-color-rgb:     243, 239, 224;
   --bs-secondary-bg:       #0c3825;
   --bs-secondary-bg-rgb:   12, 56, 37;
   --bs-tertiary-bg:        #0a301f;
   --bs-tertiary-bg-rgb:    10, 48, 31;
- 
-  /* bordas e links */
+
+  /* Bordas, links, texto secundário e brilho de foco (contorno ao clicar) */
   --bs-border-color:       rgba(212, 175, 55, .35);
   --bs-link-color:         #f0d27a;
   --bs-link-color-rgb:     240, 210, 122;
@@ -48,8 +70,13 @@
   --bs-secondary-color:    rgba(243, 239, 224, .65);
   --bs-focus-ring-color:   rgba(212, 175, 55, .35);
 }
- 
-/* Faixa de aviso e itens com fundo dourado: texto verde escuro para dar contraste */
+
+
+/* ==========================================================
+   FAIXA DE AVISO E ITENS DOURADOS
+   ========================================================== */
+/* Como o fundo agora é dourado, o texto precisa ser verde escuro
+   para ter contraste e ficar legível. !important força sobre o Bootstrap. */
 .bg-primary,
 .bg-danger,
 .text-bg-danger,
@@ -57,23 +84,29 @@
   color: #07261a !important;
   font-weight: 600;
 }
- 
-/* Botões primários: dourado */
+
+
+/* ==========================================================
+   BOTÕES
+   ========================================================== */
+/* Botão primário: fundo dourado, texto verde escuro.
+   Cada variável --bs-btn-* controla um estado (normal, hover, clique). */
 .btn-primary {
   --bs-btn-color: #07261a;
   --bs-btn-bg: #d4af37;
   --bs-btn-border-color: #d4af37;
   --bs-btn-hover-color: #07261a;
-  --bs-btn-hover-bg: #f0d27a;
+  --bs-btn-hover-bg: #f0d27a;            /* mais claro ao passar o mouse */
   --bs-btn-hover-border-color: #f0d27a;
   --bs-btn-active-color: #07261a;
-  --bs-btn-active-bg: #b8932a;
+  --bs-btn-active-bg: #b8932a;           /* mais escuro ao clicar */
   --bs-btn-active-border-color: #b8932a;
   --bs-btn-focus-shadow-rgb: 212, 175, 55;
   font-weight: 600;
 }
- 
-/* Botões com contorno */
+
+/* Botões só com contorno: borda e texto dourados; ao passar o mouse
+   enchem de dourado e o texto vira verde escuro */
 .btn-outline-primary,
 .btn-outline-light {
   --bs-btn-color: #d4af37;
@@ -85,8 +118,8 @@
   --bs-btn-active-bg: #b8932a;
   --bs-btn-active-border-color: #b8932a;
 }
- 
-/* Botão secundário (Fechar no modal): verde */
+
+/* Botão secundário (ex.: "Fechar" no modal): verde, clareia no hover */
 .btn-secondary {
   --bs-btn-bg: #145a3a;
   --bs-btn-border-color: #145a3a;
@@ -95,74 +128,123 @@
   --bs-btn-active-bg: #0c3825;
   --bs-btn-active-border-color: #0c3825;
 }
- 
-/* Navbar */
+
+
+/* ==========================================================
+   NAVBAR (barra de navegação)
+   ========================================================== */
+/* Linha dourada embaixo da barra */
 .navbar {
   border-bottom: 2px solid #d4af37;
 }
+
+/* Nome da loja (logo em texto) em dourado */
 .navbar-brand { color: #d4af37 !important; }
+
+/* Links do menu e itens do dropdown ficam dourados no hover/foco */
 .nav-link:hover,
 .nav-link:focus,
 .dropdown-item:hover {
   color: #d4af37;
 }
+
+/* Menu suspenso: fundo verde, borda dourada, item destacado no hover */
 .dropdown-menu {
   --bs-dropdown-bg: #0c3825;
   --bs-dropdown-border-color: rgba(212, 175, 55, .45);
   --bs-dropdown-link-hover-bg: #145a3a;
   --bs-dropdown-link-hover-color: #f0d27a;
 }
+
+/* Botão "hambúrguer" (menu no celular) com borda dourada */
 .navbar-toggler { border-color: #d4af37; }
- 
-/* Cards */
+
+
+/* ==========================================================
+   CARDS DE PRODUTO
+   ========================================================== */
+/* Fundo verde, borda dourada suave e transição para animar o hover */
 .card {
   --bs-card-bg: #0c3825;
   --bs-card-border-color: rgba(212, 175, 55, .35);
   transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
+
+/* Ao passar o mouse: card sobe 3px, borda fica dourada forte e ganha sombra */
 .card:hover {
   transform: translateY(-3px);
   border-color: #d4af37;
   box-shadow: 0 .5rem 1.25rem rgba(0, 0, 0, .4);
 }
+
+/* Título do card em dourado claro */
 .card-title { color: #f0d27a; }
- 
-/* Títulos */
+
+
+/* ==========================================================
+   TÍTULOS
+   ========================================================== */
+/* Títulos h2, h4 e h6 em dourado */
 h2, h4 {
   color: #d4af37;
 }
 h6 { color: #d4af37; }
- 
-/* Formulários */
+
+
+/* ==========================================================
+   FORMULÁRIOS
+   ========================================================== */
+/* Campos de texto: fundo verde, texto creme, borda dourada.
+   Repetir :focus garante que o fundo não volte a ficar branco ao clicar. */
 .form-control,
 .form-control:focus {
   background-color: #0c3825;
   color: #f3efe0;
   border-color: rgba(212, 175, 55, .5);
 }
+
+/* Campo em foco: borda dourada forte e brilho dourado ao redor */
 .form-control:focus {
   border-color: #d4af37;
   box-shadow: 0 0 0 .25rem rgba(212, 175, 55, .25);
 }
+
+/* Texto de exemplo (placeholder) em creme semitransparente */
 .form-control::placeholder { color: rgba(243, 239, 224, .5); }
- 
-/* Carrossel */
+
+
+/* ==========================================================
+   CARROSSEL
+   ========================================================== */
+/* Bolinhas indicadoras (embaixo do carrossel) em dourado */
 .carousel-indicators [data-bs-target] { background-color: #d4af37; }
- 
-/* Modal */
+
+
+/* ==========================================================
+   MODAL (pop-up)
+   ========================================================== */
+/* Caixa do modal: fundo verde, borda dourada e linhas divisórias suaves
+   no cabeçalho e no rodapé */
 .modal-content {
   --bs-modal-bg: #0c3825;
   --bs-modal-border-color: #d4af37;
   --bs-modal-header-border-color: rgba(212, 175, 55, .35);
   --bs-modal-footer-border-color: rgba(212, 175, 55, .35);
 }
+
+/* Botão "X" de fechar: o filter pinta o ícone (branco por padrão) de dourado */
 .btn-close { filter: invert(1) sepia(1) saturate(4) hue-rotate(5deg); }
- 
-/* Rodapé */
+
+
+/* ==========================================================
+   RODAPÉ
+   ========================================================== */
+/* Linha dourada em cima do rodapé */
 footer {
   border-top: 2px solid #d4af37;
 }
+
+/* Linha divisória interna do rodapé, mais suave (!important vence o Bootstrap) */
 footer .border-top {
   border-color: rgba(212, 175, 55, .35) !important;
 }
- 
